@@ -16,7 +16,7 @@ class TaskController extends AbstractController
      */
     public function listAction(EntityManagerInterface $em)
     {
-        return $this->render('task/list.html.twig', ['tasks' => $em->getRepository(Task::class)->findAll()]);
+        return $this->render('task/list.html.twig', ['tasks' => $em->getRepository(Task::class)->findBy(array('user' => $this->getUser()->getId()))]);
     }
 
     /**
@@ -31,6 +31,7 @@ class TaskController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
 
+            $task->setUser($this->getUser());
             $em->persist($task);
             $em->flush();
 
