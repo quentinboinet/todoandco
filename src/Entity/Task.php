@@ -8,6 +8,8 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * @ORM\Entity
  * @ORM\Table
+ * @ORM\EntityListeners({"App\EventListener\UserAssignedTask"})
+ * @ORM\HasLifecycleCallbacks()
  */
 class Task
 {
@@ -108,4 +110,5 @@ class Task
 
         return $this;
     }
+
 }
