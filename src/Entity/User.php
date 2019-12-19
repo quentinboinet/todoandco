@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -40,8 +42,6 @@ class User implements UserInterface
      */
     private $email;
 
-<<<<<<< Updated upstream
-=======
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\Task", mappedBy="user")
      */
@@ -57,7 +57,6 @@ class User implements UserInterface
         $this->tasks = new ArrayCollection();
     }
 
->>>>>>> Stashed changes
     public function getId()
     {
         return $this->id;
@@ -101,8 +100,6 @@ class User implements UserInterface
     public function eraseCredentials()
     {
     }
-<<<<<<< Updated upstream
-=======
 
     /**
      * @return Collection|Task[]
@@ -150,7 +147,4 @@ class User implements UserInterface
     {
         $this->roles = $roles;
     }
-
-
->>>>>>> Stashed changes
 }
