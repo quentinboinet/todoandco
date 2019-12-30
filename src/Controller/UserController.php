@@ -71,9 +71,7 @@ class UserController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $password = $this->passwordEncoder->encodePassword($user, $user->getPassword());
-            $user->setPassword($password);
-
+            
             $em->flush();
 
             $this->addFlash('success', "L'utilisateur a bien été modifié");
