@@ -98,7 +98,7 @@ class Task
     {
         $this->isDone = $flag;
     }
-    
+
     public function getUser(): ?User
     {
         return $this->user;
