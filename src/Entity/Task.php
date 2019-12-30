@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\TaskRepository")
  * @ORM\Table
  * @ORM\EntityListeners({"App\EventListener\UserAssignedTask"})
  * @ORM\HasLifecycleCallbacks()

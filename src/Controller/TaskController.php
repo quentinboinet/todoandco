@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Task;
 use App\Form\TaskType;
+use App\Repository\TaskRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -14,9 +15,9 @@ class TaskController extends AbstractController
     /**
      * @Route("/tasks", name="task_list")
      */
-    public function listAction(EntityManagerInterface $em)
+    public function listAction(EntityManagerInterface $em, TaskRepository $repository)
     {
-        return $this->render('task/list.html.twig', ['tasks' => $em->getRepository(Task::class)->findAll()]);
+        return $this->render('task/list.html.twig', ['tasks' => $repository->findBy(array('user' => $this->getUser()->getId()))]);
     }
 
     /**
