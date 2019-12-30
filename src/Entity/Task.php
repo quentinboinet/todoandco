@@ -8,6 +8,8 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * @ORM\Entity
  * @ORM\Table
+ * @ORM\EntityListeners({"App\EventListener\UserAssignedTask"})
+ * @ORM\HasLifecycleCallbacks()
  */
 class Task
 {
@@ -39,6 +41,12 @@ class Task
      * @ORM\Column(type="boolean")
      */
     private $isDone;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="tasks")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $user;
 
     public function __construct()
     {
@@ -89,5 +97,15 @@ class Task
     public function toggle($flag)
     {
         $this->isDone = $flag;
+    }
+    
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+    public function setUser(?User $user): self
+    {
+        $this->user = $user;
+        return $this;
     }
 }
