@@ -28,12 +28,14 @@ class Task
     /**
      * @ORM\Column(type="string")
      * @Assert\NotBlank(message="Vous devez saisir un titre.")
+     * @Assert\Length(min=2, minMessage="Votre titre doit contenir au moins 2 caractères.")
      */
     private $title;
 
     /**
      * @ORM\Column(type="text")
      * @Assert\NotBlank(message="Vous devez saisir du contenu.")
+     * @Assert\Length(min=2, minMessage="Le contenu de la tâche doit faire au minimum 2 caractères.")
      */
     private $content;
 
