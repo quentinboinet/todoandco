@@ -12,6 +12,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * @ORM\Table("user")
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
+ * @UniqueEntity("username")
  * @UniqueEntity("email")
  */
 class User implements UserInterface
@@ -26,11 +27,13 @@ class User implements UserInterface
     /**
      * @ORM\Column(type="string", length=25, unique=true)
      * @Assert\NotBlank(message="Vous devez saisir un nom d'utilisateur.", groups={"registration"})
+     * @Assert\Length(min=2, minMessage="Votre nom d'utilisateur doit contenir au moins 2 caractères.")
      */
     private $username;
 
     /**
      * @Assert\NotBlank(message="Vous devez saisir un mot de passe.", groups={"registration"})
+     * @Assert\Length(min=5, minMessage="Le mot de passe doit contenir au moins 5 caractères.")
      * @ORM\Column(type="string", length=64)
      */
     private $password;
@@ -149,34 +152,4 @@ class User implements UserInterface
         $this->roles = $roles;
     }
 
-    /**
-     * @return Collection|Task[]
-     */
-    public function getTasks(): Collection
-    {
-        return $this->tasks;
-    }
-
-    public function addTask(Task $task): self
-    {
-        if (!$this->tasks->contains($task)) {
-            $this->tasks[] = $task;
-            $task->setUser($this);
-        }
-
-        return $this;
-    }
-
-    public function removeTask(Task $task): self
-    {
-        if ($this->tasks->contains($task)) {
-            $this->tasks->removeElement($task);
-            // set the owning side to null (unless already changed)
-            if ($task->getUser() === $this) {
-                $task->setUser(null);
-            }
-        }
-
-        return $this;
-    }
 }

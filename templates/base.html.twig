@@ -8,7 +8,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>To Do List app</title>
+        <title>ToDo&Co</title>
 
         <!-- Bootstrap Core CSS -->
         <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
@@ -23,6 +23,18 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
+
+    {% for flash_message in app.session.flashBag.get('success') %}
+        <div class="alert alert-success" role="alert">
+            <strong>Superbe !</strong> {{ flash_message }}
+        </div>
+    {% endfor %}
+
+    {% for flash_message in app.session.flashBag.get('error') %}
+        <div class="alert alert-danger" role="alert">
+            <strong>Oops !</strong> {{ flash_message }}
+        </div>
+    {% endfor %}
 
     <body>
         <nav class="navbar navbar-light navbar-fixed-top" style="background-color: #e3f2fd;" role="navigation">
@@ -53,18 +65,6 @@
 
             <div class="row">
                 <div class="col-md-12">
-                    {% for flash_message in app.session.flashBag.get('success') %}
-                        <div class="alert alert-success" role="alert">
-                            <strong>Superbe !</strong> {{ flash_message }}
-                        </div>
-                    {% endfor %}
-
-                    {% for flash_message in app.session.flashBag.get('error') %}
-                        <div class="alert alert-danger" role="alert">
-                            <strong>Oops !</strong> {{ flash_message }}
-                        </div>
-                    {% endfor %}
-
                     {% block header_title %}{% endblock %}
                     {% block header_img %}<img class="slide-image" src="{{ asset('img/todolist_homepage.jpg') }}" alt="todo list">{% endblock %}
                 </div>
