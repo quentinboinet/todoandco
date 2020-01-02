@@ -1,0 +1,6 @@
+App\Entity\Task:
+  task{0..100}:
+    title: '<words(3, true)>'
+    content: '<text(500)>'
+    isDone: '<boolean()>'
+    user: '@user*'

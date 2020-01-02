@@ -1,0 +1,11 @@
+App\Entity\User:
+  user (template):
+    username: '<username()>'
+    password: '@self->username'
+    email: '<email()>'
+
+  user{1..5} (extends user):
+    roles: ["ROLE_USER"]
+
+  user{6..10} (extends user):
+    roles: ["ROLE_ADMIN"]

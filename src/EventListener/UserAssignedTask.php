@@ -21,7 +21,9 @@ class UserAssignedTask extends AbstractController
 
     public function prePersist(Task $task, LifecycleEventArgs $eventArgs)
     {
-        $task->setUser($this->security->getUser());
+        if (!is_null($this->security->getUser())) {
+            $task->setUser($this->security->getUser());
+        }
     }
 
     public function preRemove(Task $task, LifecycleEventArgs $eventArgs)
