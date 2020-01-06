@@ -2,16 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ccede74d-1df5-4811-a371-57df3ed0943d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/todoandco.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/todoandco.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bootstrap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpunit.xml.dist" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml.dist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Controller/DefaultControllerTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test-coverage/Controller/DefaultController.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/Controller/DefaultController.php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test-coverage/Controller/SecurityController.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/Controller/SecurityController.php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test-coverage/Controller/TaskController.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/Controller/TaskController.php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test-coverage/Controller/UserController.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/Controller/UserController.php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test-coverage/Controller/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/Controller/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test-coverage/Controller/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/Controller/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test-coverage/Doctrine/Processor/UserProcessor.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/Doctrine/Processor/UserProcessor.php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test-coverage/Doctrine/Processor/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/Doctrine/Processor/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test-coverage/Doctrine/Processor/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/Doctrine/Processor/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test-coverage/Doctrine/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/Doctrine/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test-coverage/Doctrine/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/Doctrine/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test-coverage/Entity/Task.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/Entity/Task.php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test-coverage/Entity/User.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/Entity/User.php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test-coverage/Entity/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/Entity/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test-coverage/Entity/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/Entity/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test-coverage/EventListener/UserAssignedTask.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/EventListener/UserAssignedTask.php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test-coverage/EventListener/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/EventListener/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test-coverage/EventListener/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/EventListener/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test-coverage/Form/TaskType.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/Form/TaskType.php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test-coverage/Form/UserType.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/Form/UserType.php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test-coverage/Form/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/Form/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test-coverage/Form/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/Form/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test-coverage/Kernel.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/Kernel.php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test-coverage/Migrations/Version20191217142314.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/Migrations/Version20191217142314.php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test-coverage/Migrations/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/Migrations/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test-coverage/Migrations/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/Migrations/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test-coverage/Repository/TaskRepository.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/Repository/TaskRepository.php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test-coverage/Repository/UserRepository.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/Repository/UserRepository.php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test-coverage/Repository/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/Repository/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test-coverage/Repository/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/Repository/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test-coverage/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test-coverage/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,6 +158,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -180,7 +204,7 @@
       <workItem from="1578040747039" duration="801000" />
       <workItem from="1578047720998" duration="2058000" />
       <workItem from="1578051814617" duration="617000" />
-      <workItem from="1578314321558" duration="3315000" />
+      <workItem from="1578314321558" duration="7696000" />
     </task>
     <servers />
   </component>
@@ -208,10 +232,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1576857341358" />
-    <state x="726" y="318" key="NewPhpClassDialog" timestamp="1577713427619">
+    <state x="726" y="318" key="NewPhpClassDialog" timestamp="1578319464127">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="726" y="318" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1577713427619" />
+    <state x="726" y="318" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1578319464127" />
     <state x="795" y="439" key="NewPhpFileDialog" timestamp="1577974676082">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
