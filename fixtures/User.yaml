@@ -4,8 +4,20 @@ App\Entity\User:
     password: '@self->username'
     email: '<email()>'
 
+  user0:
+    username: 'userTest'
+    password: 'userTest'
+    email: 'userTest@live.fr'
+    roles: ["ROLE_USER"]
+
   user{1..5} (extends user):
     roles: ["ROLE_USER"]
 
   user{6..10} (extends user):
+    roles: ["ROLE_ADMIN"]
+
+  user11:
+    username: 'adminTest'
+    password: 'adminTest'
+    email: 'adminTest@live.fr'
     roles: ["ROLE_ADMIN"]
