@@ -56,3 +56,23 @@ footer {
 .alert {
     text-align:center;
 }
+
+#errorBlock {
+    text-align:center;
+}
+
+@media screen and (max-width: 640px) {
+    #errorBlock img {
+        height: 150px;
+    }
+}
+
+#errorBlock p {
+    font-size: 1.2em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#errorBlock img {
+    height:30vh;
+}

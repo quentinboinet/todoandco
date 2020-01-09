@@ -27,7 +27,6 @@ class DefaultControllerTest extends WebTestCase
         $client->request('GET', '/');
 
         $this->assertEquals(200, $client->getResponse()->getStatusCode());//on vérifie qu'on arrive sur la page d'accueil
-
         $this->assertContains('Bienvenue sur Todo List, l\'application vous permettant de gérer l\'ensemble de vos tâches sans effort !', $client->getResponse()->getContent()); //on vérifie qu'il s'agit bien de la page d'accueil
     }
 }

@@ -27,7 +27,7 @@ class SecurityControllerTest extends WebTestCase
         $crawler = $this->client->submitForm('login', ['_username' => 'userTest', '_password' => 'userTest']);
 
         $this->client->followRedirect();
-        $this->assertContains('Bienvenue sur Todo List, l\'application vous permettant de gérer l\'ensemble de vos tâches sans effort !', $this->client->getResponse()->getContent()); //on vérifie qu'il s'agit bien de la page d'accueil
+        $this->assertContains('Se déconnecter', $this->client->getResponse()->getContent()); //on vérifie qu'il s'agit bien de la page d'accueil
 
         $this->assertNotContains('Créer un utilisateur' , $this->client->getResponse()->getContent()); //on vérifie qu'il ne s'agit pas de la page admin
     }
@@ -53,13 +53,15 @@ class SecurityControllerTest extends WebTestCase
 
     public function testLogout()
     {
-        $client = static::createClient([], [
-            'PHP_AUTH_USER' => 'userTest',
-            'PHP_AUTH_PW'   => 'userTest',
-        ]);
-        $client->request('GET', '/logout');
+        $this->client->request('GET', '/login');
+        $crawler = $this->client->submitForm('login', ['_username' => 'userTest', '_password' => 'userTest']);
 
-        $client->followRedirect();
-        $this->assertContains('Bienvenue sur Todo List, l\'application vous permettant de gérer l\'ensemble de vos tâches sans effort !', $client->getResponse()->getContent()); //on vérifie qu'on arrive bien sur la page de login à nouveau
+        $this->client->followRedirect();
+        $this->assertContains('Se déconnecter', $this->client->getResponse()->getContent()); //on vérifie qu'il s'agit bien de la page d'accueil
+
+        $this->client->request('GET', '/logout');
+        $this->client->followRedirect();
+        $crawler = $this->client->followRedirect();
+        $this->assertSame(2, $crawler->filter('form input#username')->count() + $crawler->filter('form input#password')->count()); //on vérifie qu'on retombe bien sur la page de login (il y a bien le champ username et password)
     }
 }
