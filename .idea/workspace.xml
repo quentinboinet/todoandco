@@ -4,9 +4,10 @@
     <list default="true" id="ccede74d-1df5-4811-a371-57df3ed0943d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/shop-homepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/shop-homepage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Controller/DefaultControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Controller/DefaultControllerTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Controller/SecurityControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Controller/SecurityControllerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/create.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/create.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Controller/UserControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Controller/UserControllerTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/test-coverage/Controller/DefaultController.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/Controller/DefaultController.php.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/test-coverage/Controller/SecurityController.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/Controller/SecurityController.php.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/test-coverage/Controller/TaskController.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-coverage/Controller/TaskController.php.html" afterDir="false" />
@@ -215,7 +216,12 @@
       <workItem from="1578390084512" duration="4000" />
       <workItem from="1578401446596" duration="12341000" />
       <workItem from="1578488941597" duration="8926000" />
-      <workItem from="1578574939488" duration="994000" />
+      <workItem from="1578574939488" duration="1293000" />
+      <workItem from="1578580568620" duration="4315000" />
+      <workItem from="1578661304259" duration="444000" />
+      <workItem from="1578661763016" duration="10000" />
+      <workItem from="1578668625167" duration="1005000" />
+      <workItem from="1578920538219" duration="2257000" />
     </task>
     <servers />
   </component>
@@ -239,22 +245,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="590" y="0" key="#com.jetbrains.php.refactoring.move.namespace.PhpMoveRelatedNamespacesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576164871660" />
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1576857341358">
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1578661711496">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1576857341358" />
-    <state x="726" y="318" key="NewPhpClassDialog" timestamp="1578494468190">
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1578661711496" />
+    <state x="726" y="318" key="NewPhpClassDialog" timestamp="1578922780899">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="726" y="318" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1578494468190" />
+    <state x="726" y="318" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1578922780899" />
     <state x="795" y="439" key="NewPhpFileDialog" timestamp="1577974676082">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="795" y="439" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1577974676082" />
-    <state x="655" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1578574968606">
+    <state x="655" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1578920538738">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="655" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1578574968606" />
+    <state x="655" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1578920538738" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1578406156709">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

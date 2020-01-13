@@ -54,7 +54,7 @@
 
                 {%  if is_granted('ROLE_ADMIN') %}<a href="{{ path('user_list') }}" class="btn btn-info">Gérer les utilisateurs</a>{% endif %}
 
-                {% if app.user %}
+                {% if app.user  %}
                 <a href="{{ path('logout') }}" class="pull-right btn btn-danger">Se déconnecter</a>
                 {% endif %}
 
