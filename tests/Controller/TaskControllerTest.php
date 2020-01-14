@@ -5,21 +5,37 @@ namespace App\Tests\Controller;
 
 
 use App\Entity\Task;
+use App\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class TaskControllerTest extends WebTestCase
 {
+    /**
+     * @var \Doctrine\ORM\EntityManager
+     */
+    private $entityManager;
     private $idTaskAuthorized;
     private $idTaskNotAuthorized;
 
-    public function setUp()
+    protected function setUp(): void
     {
-        $em = self::$kernel->getContainer('doctrine');
+        $kernel = self::bootKernel();
+
+        $em = $this->entityManager = $kernel->getContainer()
+            ->get('doctrine')
+            ->getManager();
+
+        $userTest = $em->getRepository(User::class)->findOneBy(['username' => 'userTest'])->getId();
+        $userNotTest = $userTest + 1;
+
         $taskRepo = $em->getRepository(Task::class);
-        $taskUser = $taskRepo->findOneBy(['user' => 247]);
-        $taskNotUser = $taskRepo->findOneBy(['user' => 248]);
+        $taskUser = $taskRepo->findOneBy(['user' => $userTest]);
+        $taskNotUser = $taskRepo->findOneBy(['user' => $userNotTest]);
+
         $this->idTaskAuthorized = $taskUser->getId();
         $this->idTaskNotAuthorized = $taskNotUser->getId();
+
+        self::ensureKernelShutdown();
     }
 
     public function testTasksListNotLoggedIn()
@@ -81,7 +97,7 @@ class TaskControllerTest extends WebTestCase
     public function testEditTaskNotLoggedIn()
     {
         $client = static::createClient();
-        $client->request('GET', '/tasks/313/edit');
+        $client->request('GET', '/tasks/' . $this->idTaskNotAuthorized . '/edit');
 
         $this->assertEquals(302, $client->getResponse()->getStatusCode()); //on s'assure que l'appli retourne une redirection
 
@@ -95,7 +111,7 @@ class TaskControllerTest extends WebTestCase
             'PHP_AUTH_USER' => 'userTest',
             'PHP_AUTH_PW'   => 'userTest',
         ]);
-        $client->request('GET', '/tasks/313/edit');
+        $client->request('GET', '/tasks/' . $this->idTaskNotAuthorized . '/edit');
 
         $this->assertEquals(200, $client->getResponse()->getStatusCode()); //on s'assure que ça retourne une page
 
@@ -108,7 +124,7 @@ class TaskControllerTest extends WebTestCase
             'PHP_AUTH_USER' => 'userTest',
             'PHP_AUTH_PW'   => 'userTest',
         ]);
-        $client->request('GET', '/tasks/417/edit');
+        $client->request('GET', '/tasks/' . $this->idTaskAuthorized . '/edit');
 
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
 
@@ -126,7 +142,7 @@ class TaskControllerTest extends WebTestCase
     public function testToggleTaskNotLoggedIn()
     {
         $client = static::createClient();
-        $client->request('GET', '/tasks/417/toggle');
+        $client->request('GET', '/tasks/' . $this->idTaskAuthorized . '/toggle');
 
         $this->assertEquals(302, $client->getResponse()->getStatusCode()); //on s'assure que l'appli retourne une redirection
 
@@ -140,7 +156,7 @@ class TaskControllerTest extends WebTestCase
             'PHP_AUTH_USER' => 'userTest',
             'PHP_AUTH_PW'   => 'userTest',
         ]);
-        $client->request('GET', '/tasks/313/toggle');
+        $client->request('GET', '/tasks/' . $this->idTaskNotAuthorized . '/toggle');
 
         $this->assertEquals(200, $client->getResponse()->getStatusCode()); //on s'assure que ça retourne une page
 
@@ -153,7 +169,7 @@ class TaskControllerTest extends WebTestCase
             'PHP_AUTH_USER' => 'userTest',
             'PHP_AUTH_PW'   => 'userTest',
         ]);
-        $client->request('GET', '/tasks/417/toggle');
+        $client->request('GET', '/tasks/' . $this->idTaskAuthorized . '/toggle');
 
         $this->assertEquals(302, $client->getResponse()->getStatusCode()); //on s'assure que ça retourne bien une redirection
 
@@ -164,7 +180,7 @@ class TaskControllerTest extends WebTestCase
     public function testDeleteTaskNotLoggedIn()
     {
         $client = static::createClient();
-        $client->request('GET', '/tasks/313/delete');
+        $client->request('GET', '/tasks/' . $this->idTaskNotAuthorized . '/delete');
 
         $this->assertEquals(302, $client->getResponse()->getStatusCode()); //on s'assure que l'appli retourne une redirection
 
@@ -178,7 +194,7 @@ class TaskControllerTest extends WebTestCase
             'PHP_AUTH_USER' => 'userTest',
             'PHP_AUTH_PW'   => 'userTest',
         ]);
-        $client->request('GET', '/tasks/313/delete');
+        $client->request('GET', '/tasks/' . $this->idTaskNotAuthorized . '/delete');
 
         $this->assertEquals(403, $client->getResponse()->getStatusCode()); //on s'assure que ça retourne un 403 non autorisé
     }
@@ -189,7 +205,7 @@ class TaskControllerTest extends WebTestCase
             'PHP_AUTH_USER' => 'userTest',
             'PHP_AUTH_PW'   => 'userTest',
         ]);
-        $client->request('GET', '/tasks/417/delete');
+        $client->request('GET', '/tasks/' . $this->idTaskAuthorized . '/delete');
 
         $this->assertEquals(302, $client->getResponse()->getStatusCode()); //on s'assure que ça retourne bien une redirection
 
