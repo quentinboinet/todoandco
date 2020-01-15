@@ -3,9 +3,8 @@
 
 namespace App\Tests\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-class DefaultControllerTest extends WebTestCase
+class DefaultControllerTest extends BaseController
 {
     public function testHomePageWhenNotLoggedIn()
     {
@@ -20,10 +19,7 @@ class DefaultControllerTest extends WebTestCase
 
     public function testHomePageWhenLoggedIn()
     {
-        $client = static::createClient([], [
-            'PHP_AUTH_USER' => 'userTest',
-            'PHP_AUTH_PW'   => 'userTest',
-        ]);
+        $client = $this->loginClient('userTest', 'userTest');
         $client->request('GET', '/');
 
         $this->assertEquals(200, $client->getResponse()->getStatusCode());//on vérifie qu'on arrive sur la page d'accueil

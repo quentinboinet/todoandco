@@ -6,7 +6,7 @@ use App\Entity\Task;
 use App\Form\TaskType;
 use App\Repository\TaskRepository;
 use Doctrine\ORM\EntityManagerInterface;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\Security;
@@ -18,7 +18,15 @@ class TaskController extends AbstractController
      */
     public function listAction(EntityManagerInterface $em, TaskRepository $repository)
     {
-        return $this->render('task/list.html.twig', ['tasks' => $repository->findBy(array('user' => $this->getUser()->getId()))]);
+        return $this->render('task/list.html.twig', ['tasks' => $repository->findBy(array('user' => $this->getUser()->getId(), 'isDone' => 0), ['createdAt' => 'DESC'])]);
+    }
+
+    /**
+     * @Route("/tasks/archive", name="task_archive")
+     */
+    public function listDoneAction(EntityManagerInterface $em, TaskRepository $repository)
+    {
+        return $this->render('task/list.html.twig', ['tasks' => $repository->findBy(array('user' => $this->getUser()->getId(), 'isDone' => 1), ['createdAt' => 'DESC'])]);
     }
 
     /**
@@ -83,11 +91,11 @@ class TaskController extends AbstractController
 
                 if ($task->isDone()) {
                     $this->addFlash('success', sprintf('La tâche %s a bien été marquée comme faite.', $task->getTitle()));
+                    return $this->redirectToRoute('task_list');
                 } else {
                     $this->addFlash('success', sprintf('La tâche %s a bien été marquée comme non terminée.', $task->getTitle()));
+                    return $this->redirectToRoute('task_archive');
                 }
-
-                return $this->redirectToRoute('task_list');
             }
             else {
                 return $this->render('bundles/TwigBundle/Exception/error404.html.twig');
@@ -99,11 +107,16 @@ class TaskController extends AbstractController
      */
     public function deleteTaskAction(Task $task, EntityManagerInterface $em, Security $security)
     {
-                $em->remove($task);
-                $em->flush();
+        if ($task->isDone()) {
+            $route = 'task_archive';
+        }
+        else {
+            $route = 'task_list';
+        }
+        $em->remove($task);
+        $em->flush();
 
-                $this->addFlash('success', 'La tâche a bien été supprimée.');
-
-                return $this->redirectToRoute('task_list');
+        $this->addFlash('success', 'La tâche a bien été supprimée.');
+       return $this->redirectToRoute($route);
     }
 }

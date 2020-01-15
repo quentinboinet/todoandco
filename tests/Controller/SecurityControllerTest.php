@@ -3,10 +3,7 @@
 
 namespace App\Tests\Controller;
 
-
-use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
-
-class SecurityControllerTest extends WebTestCase
+class SecurityControllerTest extends BaseController
 {
     private $client;
 

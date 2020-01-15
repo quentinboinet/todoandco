@@ -4,9 +4,7 @@
 namespace App\Tests\Controller;
 
 
-use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
-
-class UserControllerTest extends WebTestCase
+class UserControllerTest extends BaseController
 {
     public function testCreateUserNotLoggedIn()
     {
@@ -21,10 +19,7 @@ class UserControllerTest extends WebTestCase
 
     public function testCreateUserNotAuthorized()
     {
-        $client = static::createClient([], [
-            'PHP_AUTH_USER' => 'userTest',
-            'PHP_AUTH_PW'   => 'userTest',
-        ]);
+        $client = $this->loginClient('userTest', 'userTest');
         $client->request('GET', '/users/create');
 
         $this->assertEquals(403, $client->getResponse()->getStatusCode()); //on s'assure que l'appli retourne un 403 non autorisé
@@ -34,10 +29,7 @@ class UserControllerTest extends WebTestCase
 
     public function testCreateUserAuthorized()
     {
-        $client = static::createClient([], [
-            'PHP_AUTH_USER' => 'adminTest',
-            'PHP_AUTH_PW'   => 'adminTest',
-        ]);
+        $client = $this->loginClient('adminTest', 'adminTest');
         $client->request('GET', '/users/create');
 
         $this->assertEquals(200, $client->getResponse()->getStatusCode()); //on s'assure que l'appli retourne un 200
@@ -69,10 +61,7 @@ class UserControllerTest extends WebTestCase
 
     public function testEditUserNotAuthorized()
     {
-        $client = static::createClient([], [
-            'PHP_AUTH_USER' => 'userTest',
-            'PHP_AUTH_PW'   => 'userTest',
-        ]);
+        $client = $this->loginClient('userTest', 'userTest');
         $client->request('GET', '/users/248/edit');
 
         $this->assertEquals(403, $client->getResponse()->getStatusCode()); //on s'assure que l'appli retourne un 403 non autorisé
@@ -82,10 +71,7 @@ class UserControllerTest extends WebTestCase
 
     public function testEditUserAuthorized()
     {
-        $client = static::createClient([], [
-            'PHP_AUTH_USER' => 'adminTest',
-            'PHP_AUTH_PW'   => 'adminTest',
-        ]);
+        $client = $this->loginClient('adminTest', 'adminTest');
         $client->request('GET', '/users/248/edit');
 
         $this->assertEquals(200, $client->getResponse()->getStatusCode()); //on s'assure que l'appli retourne un 200
@@ -104,10 +90,7 @@ class UserControllerTest extends WebTestCase
 
     public function testEditUserDoesNotExistUserAuthorized()
     {
-        $client = static::createClient([], [
-            'PHP_AUTH_USER' => 'adminTest',
-            'PHP_AUTH_PW'   => 'adminTest',
-        ]);
+        $client = $this->loginClient('adminTest', 'adminTest');
         $client->request('GET', '/users/225/edit');
 
         $this->assertEquals(404, $client->getResponse()->getStatusCode()); //on s'assure que l'appli retourne un 404 not found
