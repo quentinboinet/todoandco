@@ -40,5 +40,5 @@ Vous souhaitez apporter votre pière à l'édifice en développant une nouvelle 
 
 Afin de garantir et de maintenir un haut niveau de qualité de code, quelques règles sont à respecter dans votre développement :
 * Le respect des principales recommandations en vigueur est obligatoire (W3C pour le HTML/CSS ou PSR pour le PHP)
-* L'utilisation d'outils tels que PHP-CS-Fixer ou CodeClimate est fortement encouragé.
-* Afin de maintenir le projet viable, le développement de tests unitaires et fonctionnels accompagnant vos ajouts est obligatoire.
+* L'utilisation d'outils tels que PHP-CS-Fixer ou CodeClimate est fortement encouragé. Chaque pull request ou apport de nouveau code à l'application doit avoir fait l'objet d'analyse via un ou plusieurs de ces outils.
+* Afin de maintenir le projet viable, le développement de tests unitaires et fonctionnels accompagnant vos ajouts est obligatoire. Ceux-ci devront être réalisés avec PHPUnit afin de maintenir une cohérence.
