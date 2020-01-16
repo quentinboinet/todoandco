@@ -22,3 +22,12 @@ Le projet est une application de ToDo list et présente les fonctionnalités sui
 1. Afin de lancer le serveur, lancez la commande <i>php bin/console server:run</i>
 
 Bravo, l'application est désormais accessible à l'adresse : localhost:8000 !
+
+## Tests
+
+Si vous souhaitez lancer les tests unitaires et fonctionnels et créer un rapport de couverture de code, lancez la commande suivante à la racine du projet : <i>php bin/phpunit --coverage-html web/test-coverage</i>
+Le rapport sera produit en HTML et disponible dans le dossier web/test-coverage.
+
+## Contribuer
+
+Afin de contribuer à ce projet, merci de lire les instructions contenues dans contributing.md
