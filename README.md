@@ -1,4 +1,4 @@
-#ToDoList
+ToDoList
 ========
 
 Ce dépôt contient le code du projet 8 réalisé durant ma formation de développpeur PHP/Symfony à OpenClassrooms.
@@ -8,8 +8,6 @@ Le projet est une application de ToDo list et présente les fonctionnalités sui
 * Ajout, édition et suppression de tâches à faire
 * Possibilité de marquer une tâche en terminée
 * Visualisation de la liste des tâches à faire/terminées
-
-========
 
 ## Installation
 
@@ -22,7 +20,3 @@ Le projet est une application de ToDo list et présente les fonctionnalités sui
 1. Afin de lancer le serveur, lancez la commande <i>php bin/console server:run</i>
 
 Bravo, l'application est désormais accessible à l'adresse : localhost:8000 !
-
-========
-
-## Contribuer
