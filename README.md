@@ -9,6 +9,8 @@ Le projet est une application de ToDo list et présente les fonctionnalités sui
 * Possibilité de marquer une tâche en terminée
 * Visualisation de la liste des tâches à faire/terminées
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/ee6923ebf98a9189f078/maintainability)](https://codeclimate.com/github/quentinboinet/todoandco/maintainability)
+
 ## Installation
 
 1. Clonez ou téléchargez le contenu du dépôt GitHub : <i>git clone https://github.com/quentinboinet/todoandco.git</i>
