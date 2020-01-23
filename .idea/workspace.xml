@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ccede74d-1df5-4811-a371-57df3ed0943d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/todoandco.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/todoandco.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/framework.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/framework.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/shop-homepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/shop-homepage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/TaskRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/TaskRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -200,7 +193,13 @@
       <workItem from="1579092200417" duration="9089000" />
       <workItem from="1579179700060" duration="3429000" />
       <workItem from="1579252778552" duration="4729000" />
-      <workItem from="1579524196984" duration="1804000" />
+      <workItem from="1579524196984" duration="8146000" />
+      <workItem from="1579537560667" duration="1578000" />
+      <workItem from="1579611530404" duration="2548000" />
+      <workItem from="1579617830976" duration="2395000" />
+      <workItem from="1579690711753" duration="916000" />
+      <workItem from="1579704204484" duration="1695000" />
+      <workItem from="1579786784715" duration="1389000" />
     </task>
     <servers />
   </component>
@@ -236,14 +235,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="795" y="439" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1577974676082" />
-    <state x="655" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1579524299883">
+    <state x="655" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1579786785024">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="655" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579524299883" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1578406156709">
+    <state x="655" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579786785024" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1579537096324">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1578406156709" />
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1579537096324" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1578924104908">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
