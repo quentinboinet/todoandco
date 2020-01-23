@@ -1,8 +1,8 @@
-ToDoList
+To Do List
 ========
 
 Ce dépôt contient le code du projet 8 réalisé durant ma formation de développpeur PHP/Symfony à OpenClassrooms.
-Le projet est une application de ToDo list et présente les fonctionnalités suivantes :
+Le projet est une application de To Do list et présente les fonctionnalités suivantes :
 * Espace utilisateur
 * Espace utilisateurs admin permettant de modifier les autres utilisateurs
 * Ajout, édition et suppression de tâches à faire
