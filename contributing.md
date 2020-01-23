@@ -1,3 +1,7 @@
+# To Do List
+
+Vous aimez notre application et avez décidé de nous aider en y contribuant ? Veuillez alors prendre connaissances de ce document qui dicte quelques règles à suivre ainsi que les bonnes pratiques attendues.
+
 # Table des matières
 
 1. Règles générales
